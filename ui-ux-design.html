@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silk & Essence | Luka Gvaramadze</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <style>
+        :root {
+            --primary: #5c4b40;
+            --bg: #fdfaf7;
+            --accent: #d4a373;
+            --font-main: 'Inter', sans-serif;
+            --font-title: 'Playfair Display', serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+        }
+
+        .product-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 100vh;
+            padding: 2rem 8%;
+            gap: 2rem;
+        }
+
+        .product-info { flex: 1; max-width: 500px; }
+
+        .product-info h1 {
+            font-family: var(--font-title);
+            font-size: clamp(3rem, 8vw, 5rem); /* ზომას ავტომატურად ცვლის ეკრანის მიხედვით */
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .buy-btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(92, 75, 64, 0.2);
+        }
+
+        /* ვიზუალური ნაწილი */
+        .product-visual {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-visual img {
+            width: 100%;
+            max-width: 450px;
+            z-index: 1;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .circle-bg {
+            position: absolute;
+            width: clamp(250px, 40vw, 500px);
+            height: clamp(250px, 40vw, 500px);
+            background: radial-gradient(circle, #f1ede9 0%, var(--bg) 70%);
+            border-radius: 50%;
+        }
+
+        /* წერტილები (Hotspots) */
+        .hotspot {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            z-index: 10;
+            cursor: help;
+            display: grid;
+            place-items: center;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .hotspot:hover { background: var(--accent); color: white; scale: 1.2; }
+
+        .hotspot::after {
+            content: attr(data-info);
+            position: absolute;
+            bottom: 35px;
+            background: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+
+        .hotspot:hover::after { opacity: 1; visibility: visible; }
+
+
+        :root {
+    --primary: #5c4b40;
+    --bg: #fdfaf7;
+    --accent: #d4a373;
+}
+
+.lang-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lang-pill {
+    position: relative;
+    width: 90px;
+    height: 40px;
+    background-color: #fff; /* თეთრი ბაზა კონტრასტისთვის */
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(92, 75, 64, 0.1); /* რბილი ჩრდილი */
+    transition: all 0.3s ease;
+}
+
+.pill-slider {
+    position: absolute;
+    width: 42px;
+    height: 32px;
+    background-color: var(--accent);
+    border-radius: 40px;
+    left: 3px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1;
+}
+
+/* ინგლისურზე გადართვისას სლაიდერის მოძრაობა */
+.lang-pill.en-active .pill-slider {
+    left: 41px;
+}
+
+.lang-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* აქტიური ენის ტექსტის ფერი */
+.lang-pill.en-active .lang-label.en,
+.lang-pill:not(.en-active) .lang-label.ka {
+    color: #fff; /* აქცენტის ფონზე თეთრი ტექსტი უკეთ ჩანს */
+}
+
+.lang-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 163, 115, 0.2);
+}
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+
+        @media (max-width: 850px) {
+            .product-hero { flex-direction: column-reverse; text-align: center; }
+            .product-info { padding-bottom: 4rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+<div class="lang-container">
+    <div class="lang-pill" onclick="toggleLanguage(); updatePillUI();">
+        <div class="pill-slider"></div>
+        <span class="lang-label ka active">KA</span>
+        <span class="lang-label en">EN</span>
+    </div>
+</div>
+</nav>
+    <section class="product-hero">
+        <div class="product-info">
+            <h1>Silk & <br> Essence</h1>
+            <p data-key="ui-ux">ბუნებრივი ინგრედიენტებით შექმნილი ფორმულა, რომელიც თქვენს თმას აბრეშუმისებრ ბზინვარებასა და სიჯანსაღეს ანიჭებს.</p>
+            <a href="project2.html" data-key="ui-ux-more" class="buy-btn">აღმოაჩინეთ მეტი</a>
+        </div>
+
+        <div class="product-visual">
+            <div class="circle-bg"></div>
+            <div class="hotspot" style="top: 25%; right: 15%;" data-info="ვიტამინი E">+</div>
+            <div class="hotspot" style="bottom: 35%; left: 10%;" data-info="არგანის ზეთი">+</div>
+            
+            <img src="image.png.png" alt="Hair Care Product">
+        </div>
+    </section>
+<script>
+    function updatePillUI() {
+    const pill = document.querySelector('.lang-pill');
+    // currentLang მოდის შენი მთავარი სკრიპტიდან
+    if (currentLang === 'en') {
+        pill.classList.add('en-active');
+    } else {
+        pill.classList.remove('en-active');
+    }
+}
+
+// გვერდის ჩატვირთვისას სწორი პოზიცია რომ ჰქონდეს
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLang') || 'ka';
+    const pill = document.querySelector('.lang-pill');
+    if (savedLang === 'en') pill.classList.add('en-active');
+});
+</script>
+</body>

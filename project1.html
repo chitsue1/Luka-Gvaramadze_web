@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1 data-key="name">ლუკა გვარამაძე</h1>
+        <p data-key="under-name">ციფრული პროექტების ენთუზიასტი • ვებ & ტექნიკური მიმართულება</p>
+    </header>
+    <nav>
+        <ul>
+             <button class="lang-switcher" onclick="toggleLanguage()">
+            <span id="lang-ka" class="lang-option active">ქარ</span>
+            <span class="lang-divider">|</span>
+            <span id="lang-en" class="lang-option">ENG</span>
+        </button>
+        </ul>
+        </nav>
+    <main class="container">
+        <section class="archive-header">
+            <h2 data-key="archive-title">ჩემი ნამუშევრების კრებული</h2>
+            <p data-key="archive-desc">აქ თავმოყრილია ყველა ის ციფრული პროდუქტი, ვებ-გვერდი და ექსპერიმენტი, რომლებზეც აქტიურად ვმუშაობდი.</p>
+        </section>
+
+        <div class="project1-grid">
+            
+            <article class="project-card">
+                <div class="project-image">🌐</div>
+                <div class="project-content">
+                    <h3 data-key="project1-title">ჩემი პორტფოლიო</h3>
+                    <p data-key="project1-desc">ჩემი პორტფოლიოს ვებ ვერსია არის ჩემი ერთერთი კრეატიული და ამავდროულად შრომატევადი ნამუშევარი</p>
+                    <a href="index.html" target="_blank" class="project-link" data-key="project1-link">იხილეთ მთავარი გვერდი →</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">🎨</div>
+                <div class="project-content">
+                    <h3 data-key="project2-title">ჩემი პირველი საიტი</h3>
+                    <p data-key="project2-desc">ჩემი პირველი და ახლანდელი საიტები სრულიად განსხვავებულია, ჩემი პირველი საიტის ნახვა შეგიძლიათ GitHub-ზე, ეს საიტი იყო ჩემი ფინალური გამოცდა html css ის კურსის დასრულებისას</p>
+                    <a href="https://github.com/chitsue1/final-exam-workshop-gvaramadze" target="_blank" class="project-link" data-key="project2-link">ლინკი აქ →</a>
+                </div>
+            </article>
+             <article class="project-card">
+                <div class="project-image">🎨</div>
+                <div class="project-content">
+                    <h3 data-key="project3-title">AI ასისტენტი რომელიც ბაზარს 24/7-ზე აკვირდება</h3>
+                    
+                    <p data-key="project3-desc" class="project-desc collapsible">Replit-ისა და Python-ის გამოყენებით შევქმენი ხელოვნური ინტელექტი, რომელიც ბაზარსა და მის ცვლილებებს აკვირდება. მას მივეცი დაახლოებით 20 სტატია და 3 წიგნი, რათა გაეგო მარკეტის მუშაობის პრინციპები, ასევე 3 საიტი, საიდანაც ნიუსებს მუდმივად აკონტროლებს. როდესაც სისტემა აფასებს, რომ მარკეტში შესვლის ხელსაყრელი დროა, ავტომატურად აგზავნის სიგნალს Telegram ბოტის საშუალებით. AI assistant-ის 24/7 რეჟიმში მუშაობისთვის იგი დავარეგისტრირე Railway-ზე.</p>
+                     <button class="toggle-btn" data-key="seemore" onclick="toggleText(this)">ნახე მეტი</button>
+                    <a href="https://github.com/chitsue1/my-ai-agent" target="_blank" class="project-link" data-key="project2-link">ლინკი აქ →</a>
+                </div>
+            </article>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" 
+               style="text-decoration: none; color: #667eea; font-weight: bold; border: 2px solid #667eea; padding: 0.8rem 1.5rem; border-radius: 5px; transition: all 0.3s ease;"
+               data-key="back-button">
+                ← მთავარ გვერდზე დაბრუნება
+            </a>
+        </div>
+    </main>
+    
+    <footer>
+        <p data-key="footer-text">&copy; 2025 ლუკა გვარამაძე. შექმნილია საკუთარი იდეითა და მიზნებით.</p>
+        <div class="social-links">
+            <a href="#" data-key="social-github">GitHub</a>
+            <a href="#" data-key="social-linkedin">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>

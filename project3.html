@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creativity | Luka Gvaramadze</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+  <style>
+        :root {
+            --bg: #050505;
+            --accent: #00ffaa;
+            --text: #e0e0e0;
+            --secondary: #121212;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: crosshair; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.5;
+        }
+
+        .main-content { padding: 8vw 10%; }
+
+        .hero-title {
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 700;
+            line-height: 0.9;
+            margin-bottom: 5rem;
+            text-transform: uppercase;
+        }
+
+        .outline-text {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+        }
+
+        /* პერსონალური ტექსტის სექცია */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 2rem;
+            margin-bottom: 8rem;
+        }
+
+        .description {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #aaa;
+            white-space: pre-line; /* ინარჩუნებს ტექსტის წყვეტას */
+        }
+
+        .description b { color: var(--accent); font-weight: 500; }
+
+        /* Grid - გასწორებული Hover ეფექტით */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .grid-item {
+            background: var(--secondary);
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 280px;
+            transition: 0.4s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .grid-item:hover {
+            background: #1a1a1a;
+            border-color: var(--accent);
+        }
+
+        .grid-item h3 { 
+            font-size: 2.2rem; 
+            margin-bottom: 1rem;
+            transition: 0.3s;
+        }
+
+        /* Hover-reveal გასწორება: აღარ აედება სათაურს */
+        .hover-reveal {
+            font-size: 1rem;
+            color: var(--accent);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: 0.3s ease;
+        }
+
+        .grid-item:hover .hover-reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* CTA ბლოკი */
+        .hire-box {
+            margin-top: 6rem;
+            background: var(--accent);
+            color: #000;
+            padding: 4rem;
+            text-align: center;
+            transition: 0.4s;
+            text-decoration: none;
+            display: block;
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hire-box:hover {
+            filter: brightness(1.1);
+            letter-spacing: 2px;
+        }
+        :root {
+    --bg: #050505;
+    --accent: #00ffaa;
+    --text: #e0e0e0;
+    --secondary: #121212;
+}
+
+.fixed-lang-wrapper {
+    position: fixed;
+    left: 20px; /* მარცხენა მხარეს განთავსება */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+.cyber-toggle {
+    width: 45px;
+    height: 100px; /* ვერტიკალური ფორმა */
+    background: var(--secondary);
+    border: 1px solid rgba(0, 255, 170, 0.2);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 0;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.cyber-toggle:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.15);
+}
+
+.cyber-slider {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: var(--accent);
+    border-radius: 50%;
+    top: 5px; /* საწყისი პოზიცია (GE) */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 15px var(--accent);
+    z-index: 1;
+}
+
+/* როცა ინგლისური აქტიურია */
+.cyber-toggle.en-active .cyber-slider {
+    top: 60px; /* ჩამოდის ქვემოთ EN-ზე */
+    background: #00ccff; /* ფერის შეცვლა მეტი ეფექტისთვის */
+    box-shadow: 0 0 20px #00ccff;
+}
+
+.cyber-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text);
+    z-index: 2;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.cyber-toggle.en-active .en { color: #000; }
+.cyber-toggle:not(.en-active) .ka { color: #000; }
+
+        @media (max-width: 768px) {
+            .about-section { grid-template-columns: 1fr; }
+            .hero-title { font-size: 4rem; }
+            .hire-box { font-size: 1.5rem; padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-lang-wrapper">
+    <div class="cyber-toggle" id="cyberToggle" onclick="toggleLanguage(); updateCyberUI();">
+        <div class="cyber-slider"></div>
+        <span class="cyber-label ka">GE</span>
+        <span class="cyber-label en">EN</span>
+    </div>
+</div>
+
+   <main class="main-content">
+    <section>
+        <h1 class="hero-title">
+            Visual <br>
+            <span class="outline-text">Logic</span>
+        </h1>
+    </section>
+
+    <section class="about-section">
+        <div style="color: var(--accent); font-weight: bold;">[ Manifest ]</div>
+        <div class="description" data-key="manifest-body">
+            ჩემს ნაშრომში <b>იდეა და კოდი ერთად მუშაობს.</b>
+            ვიზუალს წინასწარ წარმოვიდგენ და მის მიხედვით ვქმნი კოდს.
+            ყურადღებას ვაქცევ დეტალებს და იმ გამოცდილებას, რომელსაც მომხმარებელი რეალურად იღებს.
+            კოდს აღვიქვამ როგორც ლამაზ ვიზუალს, რომელიც მარტივად აღიქმება, და ამავდროულად როგორც მრავალფუნქციურ ინსტრუმენტს, რომელიც შთაბეჭდილებას ტოვებს და ინტერესს აღძრავს.
+        </div>
+    </section>
+
+    <section class="grid-container">
+        <div class="grid-item">
+            <span style="opacity: 0.3;">01</span>
+            <h3 data-key="grid1-h">Clean <br> Architecture</h3>
+            <p class="hover-reveal" data-key="grid1-p">ლოგიკა, რომელიც არ იბნევა.</p>
+        </div>
+        <div class="grid-item">
+            <span style="opacity: 0.3;">02</span>
+            <h3 data-key="grid2-h">Fluid <br> Design</h3>
+            <p class="hover-reveal" data-key="grid2-p">ანიმაცია, რომელიც სუნთქავს.</p>
+        </div>
+        <div class="grid-item">
+            <span style="opacity: 0.3;">03</span>
+            <h3 data-key="grid3-h">Pixel <br> Focus</h3>
+            <p class="hover-reveal" data-key="grid3-p">ყოველი დეტალი თავის ადგილზეა.</p>
+        </div>
+    </section>
+
+    <a href="index.html#contact" class="hire-box" data-key="hire-btn">
+        მოდი ვითანამშრომლოთ
+    </a>
+</main>
+<script>
+    function updateCyberUI() {
+    const toggle = document.getElementById('cyberToggle');
+    if (currentLang === 'en') {
+        toggle.classList.add('en-active');
+    } else {
+        toggle.classList.remove('en-active');
+    }
+}
+
+// გვერდის ჩატვირთვისას სწორი პოზიციის აღდგენა
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLang') || 'ka';
+    const toggle = document.getElementById('cyberToggle');
+    
+    if (savedLang === 'en') {
+        toggle.classList.add('en-active');
+    }
+    
+    // ასევე გაუშვი თარგმნის ფუნქცია
+    if (typeof applyTranslations === "function") applyTranslations();
+});
+</script>
+</body>

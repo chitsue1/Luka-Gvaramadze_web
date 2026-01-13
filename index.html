@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჩემი პორტფოლიო</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1 data-key="name">ლუკა გვარამაძე</h1>
+        <p data-key="under-name">ციფრული პროექტების ენთუზიასტი • ვებ & ტექნიკური მიმართულება</p>
+       
+    </header>
+
+    <nav>
+        <ul>
+             <button class="lang-switcher" onclick="toggleLanguage()">
+            <span id="lang-ka" class="lang-option active">ქარ</span>
+            <span class="lang-divider">|</span>
+            <span id="lang-en" class="lang-option">ENG</span>
+        </button>
+            <li><a href="#about" data-key="abt">ჩემს შესახებ</a></li>
+            <li><a href="#skills" data-key="skills">უნარები</a></li>
+            <li><a href="#projects" data-key="projects">პროექტები</a></li>
+            <li><a href="#contact" data-key="contact">კონტაქტი</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2 data-key="abt">ჩემს შესახებ</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-key="abt-text">მოგესალმებით! მე ვარ პროაქტიული და განვითარებაზე ორიენტირებული პროფესიონალი თბილისიდან, რომელიც დაინტერესებულია ვებ ტექნოლოგიებით, ციფრული პროდუქტებითა და თანამედროვე ონლაინ გადაწყვეტილებებით. გაიზიარებთ ჩემს ნამუშევრებს, ფიქრებსა და შესაძლებლობებს, რომლებზეც აქტიურად ვმუშაობ ამ პლატფორმაზე.</p>
+                    <p style="margin-top: 1rem;" data-key="abt-text-second">მიყვარს პრაქტიკული გამოცდილება, ვსწავლობ პრაქტიკით. მუდმივად ვმუშაობ ჩემი ტექნიკური და შემოქმედებითი შესაძლებლობების გაუმჯობესებაზე, რათა შევიმუშაო ძირითადი, მომხმარებელზე ორიენტირებული და ეფექტური გადაწყვეტილებები. მზად ვარ მივიღო ახალი გამოწვევები და ვითანამშრომლო.</p>
+                </div>
+                <div class="about-image" ><img src="mypic.jpg" alt="ლუკა გვარამაძე" class="profile-pic"></div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 data-key="my-skills">ჩემი უნარები</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🎨 Front-end</h3>
+                    <p data-key="front-end">HTML, CSS, საბაზისო JavaScript, რესპონსიული დიზაინი, UI/UX აზროვნება</p>
+                </div>
+                <div class="skill-card">
+                    <h3>⚙️ Back-end</h3>
+                    <p data-key="back-end">სერვერებთან მუშაობის საბაზისო ცოდნა, ლოგიკა, API-ს გაგება, სისტემური აზროვნება</p>
+                </div>
+                <div class="skill-card">
+                    <h3 data-key="monacemebi">🗄️ მონაცემთა ბაზები</h3>
+                    <p>PostgreSQL, MySQL, Firebase</p>
+                </div>
+                <div class="skill-card">
+                    <h3 data-key="instruments">🛠️ ინსტრუმენტები</h3>
+                    <p data-key="instruments-text">Git / GitHub, VS Code, Figma, replit, raillway, სხვადასხვა ონლაინ პლატფორმები და ხელსაწყოები</p>
+                </div>
+                <div class="skill-card">
+                    <h3 data-key="language">უცხო ენები</h3>
+                    <div class="skills-container">
+                        <div class="skill-item">
+                            <div class="skill-info"><span data-key="english">ინგლისური (C1)</span><span>90%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span data-key="russian">რუსული (B2)</span><span>70%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" style="width: 70%; background-color: #2196F3;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 data-key="my-projects">ჩემი პროექტები</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🛒</div>
+                    <div class="project-content">
+                        <h3 data-key="my-portfolio">ჩემი პორტფოლიო</h3>
+                        <p data-key="my-porfolio-text">ჩემი ნამუშევრები თავმოყრილია აქ</p>
+                        <a href="project1.html" class="project-link" data-key="link"> ნახე მეტი</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🎓</div>
+                    <div class="project-content">
+                        <h3 data-key="education">განათლება</h3>
+                        <p data-key="education-text">მე მჯერა, რომ ტექნოლოგიებში სწავლა უწყვეტი პროცესია. აქ შეგიძლიათ იხილოთ ჩემი განვლილი და მიმდინარე სასწავლო კურსები.</p>
+                        <a href="project2.html" class="project-link" data-key="link">ნახე მეტი →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📊</div>
+                    <div class="project-content">
+                        <h3 data-key="Creativity">კრეატიული ექსპერიმენტები</h3>
+                        <p data-key="Creativity-text">თავისუფალ დროს კრეატივთან ერთად შექმნილი ჩემი ნამუშევრები.</p>
+                        <a href="project3.html" data-key="link">ნახე მეტი →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 data-key="contact">დამიკავშირდით</h2>
+            <form id="my-form" action="https://formspree.io/f/mzdpnblr" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name" data-key="contact-text">სახელი</label>
+                    <input type="text" id="name" name="name" aitocomplete="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-key="mail">ელ-ფოსტა</label>
+                    <input type="email" id="email" name="email" autocomplete="mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-key="message">შეტყობინება</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" id="submit-btn" class="submit-btn" data-key="send">გაგზავნა</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p data-key="ending">&copy; 2025 ლუკა გვარამაძე. შექმნილია საკუთარი იდეითა და მიზნებით.</p>
+        <div class="social-links">
+            <a href="https://github.com/chitsue1">GitHub</a>
+            <a href="https://www.linkedin.com/in/luka-gvaramadze-65bbb63a0/">LinkedIn</a>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

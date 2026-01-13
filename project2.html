@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>განათლება | ლუკა გვარამაძე</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        /* სპეციალური სტილები მხოლოდ ამ გვერდისთვის */
+        .edu-hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .university-card {
+            background: white;
+            padding: 2rem;
+            border-left: 5px solid #0056b3;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .cert-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .view-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 8px 20px;
+            background: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ლუკა გვარამაძე</h1>
+        <p>განათლება და სერტიფიკატები</p>
+    </header>
+
+    <nav>
+    <ul>
+     <button class="lang-switcher" onclick="toggleLanguage()">
+            <span id="lang-ka" class="lang-option active">ქარ</span>
+            <span class="lang-divider">|</span>
+            <span id="lang-en" class="lang-option">ENG</span>
+        </button>
+        <li><a href="index.html" data-key="nav-home">მთავარი</a></li>
+        <li><a href="index.html#projects" data-key="nav-projects">პროექტები</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <section class="university-card">
+        <span style="font-size: 0.9rem; color: #666; font-weight: bold;" data-key="status">მიმდინარე</span>
+        <h2 style="margin: 0.5rem 0;" data-key="university">საქართველოს ტექნიკური უნივერსიტეტი (GTU)</h2>
+        <p style="font-size: 1.1rem; color: #333;" data-key="faculty">🎓 **ფაკულტეტი:** ინფორმატიკისა და მართვის სისტემები</p>
+        <p style="color: #555; margin-top: 0.5rem;" data-key="edu-desc">აქტიურად ვეუფლები კომპიუტერულ მეცნიერებებს, ალგორითმებსა და პროგრამირების საფუძვლებს.</p>
+    </section>
+
+    <hr style="border: 0; height: 1px; background: #eee; margin: 3rem 0;">
+
+    <section id="certificates">
+        <h2 style="text-align: center; margin-bottom: 2rem;" data-key="cert-title">📜 სერტიფიკატები და კურსები</h2>
+        
+        <div class="certificate-grid">
+            <div class="cert-card">
+                <div class="cert-icon">💻</div>
+                <h3 data-key="cert1-title">industry of digital academy</h3>
+                <p data-key="cert1-desc">HTML, CSS & Basic JS</p>
+                <a href="https://digitaledu.ge/" target="_blank" class="view-btn" data-key="view">ნახვა</a>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon">🚀</div>
+                <h3 data-key="cert2-title">AI</h3>
+                <p data-key="cert2-desc">თავისუფალ დროს ვსწავლობ ხელოვნურ ინტელექტს</p>
+                <a href="ai-page.html" class="view-btn" rel="noopener noreferrer" data-key="view-ai">ნახე AI კონცეფცია</a>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon">🎨</div>
+                <h3 data-key="cert3-title">UI/UX Design Essentials</h3>
+                <p data-key="cert3-desc">Figma & Prototyping</p>
+                <a href="ui-ux-design.html" class="view-btn" data-key="view">ნახვა</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p data-key="footer-text">&copy; 2025 ლუკა გვარამაძე. ყველა უფლება დაცულია.</p>
+</footer>
+</body>
