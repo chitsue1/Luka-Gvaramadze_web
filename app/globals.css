@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #1d2126;
+  color: #ece7dc;
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #e8b04b;
+  color: #1d2126;
+}
+
+:focus-visible {
+  outline: 2px solid #e8b04b;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* The one orchestrated moment: the Georgian name rises letter by letter on load. */
+.rise-ch {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.35em);
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.1, 1) forwards;
+}
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* A warm "window light" glow behind the amber status dot. */
+.lamp-dot {
+  box-shadow: 0 0 0 4px rgba(232, 176, 75, 0.15), 0 0 18px rgba(232, 176, 75, 0.45);
+}
+
+.ulink {
+  text-decoration: underline;
+  text-decoration-color: rgba(232, 176, 75, 0.55);
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 0.2s, color 0.2s;
+}
+.ulink:hover {
+  color: #e8b04b;
+  text-decoration-color: #e8b04b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise-ch {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
